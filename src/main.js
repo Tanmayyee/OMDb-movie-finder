@@ -4,6 +4,11 @@ import "./style.css";
 
 const form = document.querySelector("#searchForm");
 const div2 = document.querySelector("#div2");
+const input=document.querySelector('input')
+
+input.addEventListener("focus", () => {
+  input.select()
+});
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -18,7 +23,8 @@ form.addEventListener("submit", async (e) => {
   } else {
     div2.innerHTML = "<p class='text-white'>No movies found.</p>";
   }
-  form.elements.query.value = "";
+ 
+  // form.elements.query.value = "";
 });
 
 const searchMovie = async (movies) => {
