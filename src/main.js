@@ -1,9 +1,8 @@
 import "./style.css";
 import axios from "axios";
-import "./style.css";
 
 const form = document.querySelector("#searchForm");
-const div2 = document.querySelector("#div2");
+const movieContainer = document.querySelector("#movieContainer");
 const input=document.querySelector('input')
 
 input.addEventListener("focus", () => {
@@ -14,16 +13,25 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchTerm = form.elements.query.value;
   const config = { params: { apikey: "46e03e67", s: searchTerm } };
-  const res = await axios.get(`https://www.omdbapi.com`, config);
-   div2.innerHTML = "";
 
-  if (res.data.Search) {
+   movieContainer.innerHTML = "";        //clear screen first 
+
+  try{
+    const res = await axios.get(`https://www.omdbapi.com`, config);
+
+    if (res.data.Search) {
     searchMovie(res.data.Search);
     console.log(res.data.Search)
   } else {
-    div2.innerHTML = "<p class='text-white'>No movies found.</p>";
+    movieContainer.innerHTML = "<p class='text-white'>No movies found.</p>";
   }
- 
+
+  }catch(e){
+    movieContainer.innerHTML="<p class='text-white text-2xl'>Something went wrong. Please try again later.</p>"
+    console.log("API error",e)
+  }  
+   
+
   // form.elements.query.value = "";
 });
 
@@ -49,7 +57,7 @@ const searchMovie = async (movies) => {
 
       card.append(img);
       card.appendChild(title)
-      div2.append(card);
+      movieContainer.append(card);
     }
   }
 };
