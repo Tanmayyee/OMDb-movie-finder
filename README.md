@@ -4,6 +4,8 @@
 
 The project features a fully responsive grid layout, dynamic DOM manipulation, and graceful error handling for broken images to ensure a clean user experience across all devices.
 
+<img width="1897" height="858" alt="Screenshot 2026-07-16 165007" src="https://github.com/user-attachments/assets/bdf7900c-d29d-405a-b819-2003b427194c" />
+
 ## ✨ Features
 * **Search Functionality:** Instantly search for any movie or TV show title using the OMDb API.
 * **Responsive Design:** A fully responsive grid that adjusts perfectly from mobile screens to wide desktop monitors.
@@ -16,6 +18,12 @@ The project features a fully responsive grid layout, dynamic DOM manipulation, a
 * **Data Fetching:** Axios
 * **API:** OMDb API REST endpoints
 * **Build Tool:** Vite
+
+## 🧠 What I Learned
+Building this project solidified my understanding of:
+* **Asynchronous JavaScript:** Managing API calls using `async/await` and handling empty/null responses gracefully.
+* **DOM Manipulation:** Dynamically creating and injecting HTML elements based on real-time data.
+* **CSS Grid & Flexbox:** Enforcing uniform aspect ratios (`aspect-[2/3]`) and using Tailwind to maintain a highly responsive layout across all device sizes.
 
 ## ⚙️ How to Run Locally
 
