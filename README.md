@@ -4,7 +4,7 @@
 
 The project features a fully responsive grid layout, dynamic DOM manipulation, and graceful error handling for broken images to ensure a clean user experience across all devices.
 
-<img width="1897" height="858" alt="Screenshot 2026-07-16 165007" src="https://github.com/user-attachments/assets/bdf7900c-d29d-405a-b819-2003b427194c" />
+<img width="1898" height="862" alt="Screenshot 2026-07-16 171642" src="https://github.com/user-attachments/assets/da49fbe2-2de9-485c-9123-5ac57095a3ac" />
 
 ## ✨ Features
 * **Search Functionality:** Instantly search for any movie or TV show title using the OMDb API.
